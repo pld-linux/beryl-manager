@@ -9,7 +9,7 @@ Group:		X11/Window Managers/Tools
 Source0:	http://distfiles.xgl-coffee.org/beryl-manager/%{name}-%{version}.tar.bz2
 # Source0-md5:	1ab7696d4f91c11eb86a252647d3a021
 URL:		http://distfiles.xgl-coffee.org
-BuildRequires:	gtk+2-devel >= 2.0
+BuildRequires:	gtk+2-devel >= 2:2.0
 Requires:	beryl-core
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
