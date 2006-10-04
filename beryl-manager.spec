@@ -3,7 +3,7 @@ Summary(pl):	Aplikacja do uruchamiania i zarz±dzania berylem
 Name:		beryl-manager
 Version:	0.1.0
 Release:	1
-License:	GPL v2+
+License:	LGPL v2+
 Group:		X11/Window Managers/Tools
 Source0:	http://distfiles.xgl-coffee.org/beryl-manager/%{name}-%{version}.tar.bz2
 # Source0-md5:	1ab7696d4f91c11eb86a252647d3a021
