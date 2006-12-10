@@ -47,7 +47,7 @@ mv -f po/{tr_TR,tr}.po
 # nl_BE is identical to nl_NL
 # sv_FI is identical to sv_SE
 
-# NOTE: check the list ofter any upgrade!
+# NOTE: check the list after any upgrade!
 cat > po/LINGUAS <<EOF
 ar
 ca
