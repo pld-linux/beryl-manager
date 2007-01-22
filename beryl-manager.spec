@@ -14,7 +14,7 @@ BuildRequires:	automake >= 1:1.9
 BuildRequires:	gtk+2-devel >= 2:2.8.0
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	pkgconfig
-Requires:	beryl-core >= 1:0.1.3
+Requires:	beryl-core >= 1:0.1.99.2
 Obsoletes:	compiz-manager
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -37,11 +37,13 @@ mv -f po/{it_IT,it}.po
 mv -f po/{ja_JP,ja}.po
 mv -f po/{ko_KR,ko}.po
 mv -f po/{my_MY,my}.po
+mv -f po/{nb_NO,nb}.po
 mv -f po/{pt_PT,pt}.po
 mv -f po/{ru_RU,ru}.po
 mv -f po/{sk_SK,sk}.po
 mv -f po/{sv_SE,sv}.po
 mv -f po/{tr_TR,tr}.po
+mv -f po/{uk_UA,uk}.po
 # gl_GL is outdated and looks bogus 
 # nl_BE is identical to nl_NL
 # sv_FI is identical to sv_SE
@@ -60,6 +62,8 @@ it
 ja
 ko
 my
+nb
+nl
 pl
 pt_BR
 pt
@@ -67,6 +71,7 @@ ru
 sk
 sv
 tr
+uk
 zh_CN
 zh_HK
 zh_TW
