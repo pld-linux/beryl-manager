@@ -1,13 +1,13 @@
 Summary:	An application to run and [manage|control] beryl
 Summary(pl):	Aplikacja do uruchamiania i zarz±dzania berylem
 Name:		beryl-manager
-Version:	0.1.99.2
+Version:	0.1.9999.1
 Release:	1
 Epoch:		1
 License:	LGPL v2+
 Group:		X11/Window Managers/Tools
 Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	e685d436599297b6921f88b59d4635c4
+# Source0-md5:	805f50dc6c0fb5c3f8fa0d853710807f
 URL:		http://beryl-project.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake >= 1:1.9
