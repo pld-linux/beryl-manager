@@ -100,6 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
+%{_desktopdir}/beryl-manager.desktop
 %{_iconsdir}/*/*/*/beryl-manager.*
 %{_pixmapsdir}/*.png
 %{_mandir}/man1/*.1*
