@@ -1,5 +1,5 @@
 Summary:	An application to run and [manage|control] beryl
-Summary(pl.UTF-8):   Aplikacja do uruchamiania i zarządzania berylem
+Summary(pl.UTF-8):	Aplikacja do uruchamiania i zarządzania berylem
 Name:		beryl-manager
 Version:	0.1.9999.1
 Release:	1
