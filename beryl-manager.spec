@@ -45,7 +45,6 @@ mv -f po/{sv_SE,sv}.po
 mv -f po/{tr_TR,tr}.po
 mv -f po/{uk_UA,uk}.po
 # gl_GL is outdated and looks bogus 
-# nl_BE is identical to nl_NL
 # sv_FI is identical to sv_SE
 
 # NOTE: check the list after any upgrade!
@@ -78,8 +77,8 @@ zh_TW
 EOF
 
 %build
-%{__intltoolize}
 %{__glib_gettextize} --copy --force
+%{__intltoolize}
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
@@ -94,10 +93,12 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
 %{_desktopdir}/beryl-manager.desktop
