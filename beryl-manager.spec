@@ -1,20 +1,20 @@
 Summary:	An application to run and [manage|control] beryl
 Summary(pl.UTF-8):	Aplikacja do uruchamiania i zarządzania berylem
 Name:		beryl-manager
-Version:	0.1.9999.2
+Version:	0.2.0
 Release:	1
 Epoch:		1
 License:	LGPL v2+
 Group:		X11/Window Managers/Tools
 Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	1141372500eca8abf43a7877e724ad67
+# Source0-md5:	5bd0fb5786b6d79d6ebe87c14ba668c9
 URL:		http://beryl-project.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	gtk+2-devel >= 2:2.8.0
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	pkgconfig
-Requires:	beryl-core >= 1:0.1.99.2
+Requires:	beryl-core >= 1:0.2.0
 Obsoletes:	compiz-manager
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,15 +27,11 @@ Aplikacja do uruchamiania i zarządzania berylem.
 %prep
 %setup -q
 mv -f po/{ar_AR,ar}.po
-mv -f po/{ca_ES,ca}.po
 mv -f po/{de_DE,de}.po
 mv -f po/{es_ES,es}.po
-mv -f po/{fr_FR,fr}.po
 mv -f po/{gl_ES,gl}.po
 mv -f po/{hu_HU,hu}.po
 mv -f po/{it_IT,it}.po
-mv -f po/{ja_JP,ja}.po
-mv -f po/{ko_KR,ko}.po
 mv -f po/{my_MY,my}.po
 mv -f po/{nb_NO,nb}.po
 mv -f po/{pt_PT,pt}.po
@@ -44,8 +40,6 @@ mv -f po/{sk_SK,sk}.po
 mv -f po/{sv_SE,sv}.po
 mv -f po/{tr_TR,tr}.po
 mv -f po/{uk_UA,uk}.po
-# gl_GL is outdated and looks bogus 
-# sv_FI is identical to sv_SE
 
 # NOTE: check the list after any upgrade!
 cat > po/LINGUAS <<EOF
