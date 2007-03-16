@@ -14,7 +14,7 @@ BuildRequires:	automake >= 1:1.9
 BuildRequires:	gtk+2-devel >= 2:2.8.0
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	pkgconfig
-Requires:	beryl-core >= 1:0.2.0
+Requires:	beryl-core >= 1:%{version}
 Obsoletes:	compiz-manager
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -54,7 +54,6 @@ hu
 it
 ja
 ko
-my
 nb
 nl
 pl
