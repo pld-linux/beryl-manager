@@ -1,0 +1,10 @@
+diff -urN beryl-manager-0.2.0/beryl-manager.desktop beryl-manager-0.2.0.new/beryl-manager.desktop
+--- beryl-manager-0.2.0/beryl-manager.desktop	2007-01-21 10:13:00.000000000 +0100
++++ beryl-manager-0.2.0.new/beryl-manager.desktop	2007-03-17 15:02:46.000000000 +0100
+@@ -7,5 +7,5 @@
+ Icon=beryl-manager.svg
+ Terminal=false
+ Type=Application
+-Categories=System;Application;X-Fedora;
++Categories=GTK;System;
+ Encoding=UTF-8
