@@ -8,12 +8,16 @@ License:	LGPL v2+
 Group:		X11/Window Managers/Tools
 Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	5bd0fb5786b6d79d6ebe87c14ba668c9
+Patch0:		%{name}-desktop.patch
 URL:		http://beryl-project.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	gtk+2-devel >= 2:2.8.0
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	pkgconfig
+BuildRequires:	rpmbuild(macros) >= 1.311
+Requires(post,postun):	gtk+2
+Requires(post,postun):	hicolor-icon-theme
 Requires:	beryl-core >= 1:%{version}
 Obsoletes:	compiz-manager
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -26,6 +30,7 @@ Aplikacja do uruchamiania i zarządzania berylem.
 
 %prep
 %setup -q
+%patch0 -p1
 mv -f po/{ar_AR,ar}.po
 mv -f po/{de_DE,de}.po
 mv -f po/{es_ES,es}.po
@@ -70,7 +75,7 @@ zh_TW
 EOF
 
 %build
-%{__glib_gettextize} --copy --force
+%{__glib_gettextize}
 %{__intltoolize}
 %{__aclocal}
 %{__autoconf}
@@ -91,10 +96,16 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post
+%update_icon_cache hicolor
+
+%postun
+%update_icon_cache hicolor
+
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
 %{_desktopdir}/beryl-manager.desktop
-%{_iconsdir}/*/*/*/beryl-manager.*
+%{_iconsdir}/hicolor/*/*/beryl-manager.*
 %{_pixmapsdir}/*.png
 %{_mandir}/man1/*.1*
