@@ -2,7 +2,7 @@ Summary:	An application to run and [manage|control] beryl
 Summary(pl.UTF-8):	Aplikacja do uruchamiania i zarządzania berylem
 Name:		beryl-manager
 Version:	0.2.1
-Release:	1
+Release:	2
 Epoch:		1
 License:	LGPL v2+
 Group:		X11/Window Managers/Tools
@@ -16,7 +16,7 @@ BuildRequires:	gtk+2-devel >= 2:2.8.0
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.311
-Requires(post,postun):	gtk+2
+Requires(post,postun):	gtk-update-icon-cache
 Requires(post,postun):	hicolor-icon-theme
 Requires:	beryl-core >= 1:%{version}
 Obsoletes:	compiz-manager
